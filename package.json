@@ -1,0 +1,21 @@
+{
+  "name": "test-tic-tac-toe",
+  "version": "1.0.0",
+  "description": "Basic Tic Tac Toe",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mauro-moreno/test-tic-tac-toe.git"
+  },
+  "keywords": [
+    "tic-tac-toe",
+    "test"
+  ],
+  "author": "Mauro Moreno <moreno.mauro.emanuel@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mauro-moreno/test-tic-tac-toe/issues"
+  },
+  "homepage": "https://github.com/mauro-moreno/test-tic-tac-toe#readme"
+}
