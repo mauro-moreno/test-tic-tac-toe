@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Basic Tic Tac Toe",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "lint": "eslint ."
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mauro-moreno/test-tic-tac-toe.git"
@@ -17,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/mauro-moreno/test-tic-tac-toe/issues"
   },
-  "homepage": "https://github.com/mauro-moreno/test-tic-tac-toe#readme"
+  "homepage": "https://github.com/mauro-moreno/test-tic-tac-toe#readme",
+  "devDependencies": {
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2"
+  }
 }

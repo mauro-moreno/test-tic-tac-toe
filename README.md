@@ -9,7 +9,7 @@ Tic Tac Toe basic API
 - [ ] New game
 - [ ] Show game
 - [ ] New move
-- [ ] Linter
+- [x] Linter
 - [ ] Deploy AWS
 - [ ] Test
 - [ ] AI
