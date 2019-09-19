@@ -5,6 +5,7 @@ Tic Tac Toe basic API
 ## TODO
 
 - [ ] Configuration
+- [ ] Serverless
 - [ ] List all games
 - [ ] New game
 - [ ] Show game
@@ -16,6 +17,7 @@ Tic Tac Toe basic API
 
 ## Architecture decisions
 
+* AWS Lambda
 * UUID. [See](https://medium.com/@Mareks_082/auto-increment-keys-vs-uuid-a74d81f7476a)
 * Airbnb Linter. [See](https://github.com/airbnb/javascript)
 

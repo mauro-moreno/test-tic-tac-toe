@@ -2,9 +2,10 @@
   "name": "test-tic-tac-toe",
   "version": "1.0.0",
   "description": "Basic Tic Tac Toe",
-  "main": "index.js",
+  "main": "handler.js",
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "deploy": "serverless deploy"
   },
   "repository": {
     "type": "git",
@@ -21,8 +22,10 @@
   },
   "homepage": "https://github.com/mauro-moreno/test-tic-tac-toe#readme",
   "devDependencies": {
+    "aws-sdk": "^2.532.0",
     "eslint": "^6.4.0",
     "eslint-config-airbnb": "^18.0.1",
-    "eslint-plugin-import": "^2.18.2"
+    "eslint-plugin-import": "^2.18.2",
+    "serverless": "^1.52.1"
   }
 }
