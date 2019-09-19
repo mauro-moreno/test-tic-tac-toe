@@ -2,9 +2,22 @@
 
 Tic Tac Toe basic API
 
+## TODO
+
+- [ ] Configuration
+- [ ] List all games
+- [ ] New game
+- [ ] Show game
+- [ ] New move
+- [ ] Linter
+- [ ] Deploy AWS
+- [ ] Test
+- [ ] AI
+
 ## Architecture decisions
 
 * UUID. [See](https://medium.com/@Mareks_082/auto-increment-keys-vs-uuid-a74d81f7476a)
+* Airbnb Linter. [See](https://github.com/airbnb/javascript)
 
 ## Setup
 
