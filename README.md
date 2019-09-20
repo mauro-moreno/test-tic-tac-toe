@@ -35,7 +35,7 @@ npm install
 
 ## API
 
-Base URL: `localhost`
+Base URL: `http://localhost:3000`
 
 ### Games list
 
