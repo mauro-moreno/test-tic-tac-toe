@@ -14,6 +14,8 @@ Tic Tac Toe basic API
 - [x] Deploy AWS
 - [ ] Test
 - [ ] AI
+- [ ] Better documentation
+- [ ] Code comments
 
 ## Architecture decisions
 
