@@ -1,11 +1,6 @@
-module.exports.handler = async (event) => ({
-  statusCode: 200,
-  body: JSON.stringify(
-    {
-      message: 'Games list',
-      input: event,
-    },
-    null,
-    2,
-  ),
-});
+const { getAll: gamesGetAll } = require('../../services/games');
+
+module.exports.handler = async () => {
+  const activeGames = await gamesGetAll();
+  return { statusCode: 200, data: Array.isArray(activeGames) ? activeGames : [] };
+};

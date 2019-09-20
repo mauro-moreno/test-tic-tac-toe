@@ -29,5 +29,8 @@
     "serverless": "^1.52.1",
     "serverless-dynamodb-local": "^0.2.38",
     "serverless-offline": "^5.11.0"
+  },
+  "dependencies": {
+    "nested-error-stacks": "^2.1.0"
   }
 }
