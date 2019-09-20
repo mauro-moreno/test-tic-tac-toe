@@ -31,6 +31,7 @@ To install this project just execute:
 
 ```bash
 npm install
+serverless dynamodb install
 ```
 
 ## API
@@ -130,7 +131,7 @@ Base URL: `http://localhost:3000`
 * Body:
   ```
   {
-    "playerSymbol": "X" // or 0
+    "playerSymbol": "X" // or O
     "coordinates": {
       "x": 0, // 0, 1, 2
       "y": 0  // 0, 1, 2
