@@ -2,6 +2,7 @@
 const { DynamoDB } = require('aws-sdk');
 const NestedError = require('nested-error-stacks');
 const dynamoDbConfig = require('../config').aws.dynamodb;
+const TicTacToe = require('../models/tic-tac-toe');
 
 const dynamoDB = new DynamoDB(dynamoDbConfig);
 const documentClient = new DynamoDB.DocumentClient({ service: dynamoDB });
@@ -35,6 +36,21 @@ const games = {
       return initialGame;
     } catch (err) {
       throw new NestedError('Error while creating new game', err);
+    }
+  },
+
+  findById: async (gameId) => {
+    try {
+      const params = {
+        TableName: 'games',
+        Key: {
+          id: gameId,
+        },
+      };
+      const gameData = (await documentClient.get(params).promise()).Item;
+      return new TicTacToe(gameData);
+    } catch (err) {
+      throw new NestedError(`Error while getting game ${gameId}`, err);
     }
   },
 

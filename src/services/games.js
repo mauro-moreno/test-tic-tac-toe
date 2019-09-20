@@ -20,6 +20,8 @@ const games = {
 
   create: () => gameDb.create(defaultGame),
 
+  findById: (gameId) => gameDb.findById(gameId),
+
 };
 
 module.exports = games;

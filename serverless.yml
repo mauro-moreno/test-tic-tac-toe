@@ -28,6 +28,13 @@ functions:
           path: /games
           method: post
           integration: lambda
+  games-show:
+    handler: src/functions/games/show.handler
+    events:
+      - http:
+          path: /games/{gameId}
+          method: get
+          integration: lambda
 
 resources:
   Resources:
