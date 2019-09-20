@@ -35,6 +35,13 @@ functions:
           path: /games/{gameId}
           method: get
           integration: lambda
+  games-moves-create:
+    handler: src/functions/games/moves/create.handler
+    events:
+      - http:
+          path: /games/{gameId}/moves
+          method: post
+          integration: lambda
 
 resources:
   Resources:

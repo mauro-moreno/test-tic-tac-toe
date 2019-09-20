@@ -54,6 +54,28 @@ const games = {
     }
   },
 
+  updateGame: async (game) => {
+    const gameData = game.toJSON();
+    try {
+      const params = {
+        TableName: 'games',
+        Key: { id: game.id },
+        UpdateExpression: `set grid=:g, lastPlayer=:lp, ${gameData.winner ? 'winner=:w, ' : ''} gameOver=:go`,
+        ExpressionAttributeValues: {
+          ':g': gameData.grid,
+          ':lp': gameData.lastPlayer,
+          ':w': gameData.winner,
+          ':go': gameData.gameOver,
+        },
+        ReturnValues: 'ALL_NEW',
+      };
+      const result = await documentClient.update(params).promise();
+      return new TicTacToe(result.Attributes);
+    } catch (err) {
+      throw new NestedError('Error while updating game', err);
+    }
+  },
+
 };
 
 module.exports = games;

@@ -22,6 +22,12 @@ const games = {
 
   findById: (gameId) => gameDb.findById(gameId),
 
+  move: async (gameId, playerSymbol, coordinates) => {
+    const game = await games.findById(gameId);
+    game.move(playerSymbol, coordinates);
+    return gameDb.updateGame(game);
+  },
+
 };
 
 module.exports = games;
