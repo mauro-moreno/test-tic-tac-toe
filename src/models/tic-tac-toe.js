@@ -1,6 +1,6 @@
 const Grid = require('./grid');
 
-const PLAYERS_SYMBOLS = ['X', '0'];
+const PLAYERS_SYMBOLS = ['X', 'O'];
 
 const isComplete = (cells) => {
   const distinct = Array.from(new Set(cells));
@@ -39,7 +39,7 @@ function TicTacToe(data) {
 
   const isPlayerTurn = (playerSymbol) => this.getCurrentPlayerSymbol() === playerSymbol;
 
-  const isValidMove = (coordinates) => true;// this.grid.get(coordinates) === '-';
+  const isValidMove = (coordinates) => this.grid.get(coordinates) === '-';
 
   this.toJSON = function () {
     return { ...this, grid: this.grid.getRows(), winner: this.winner ? this.winner : 'draw' };
