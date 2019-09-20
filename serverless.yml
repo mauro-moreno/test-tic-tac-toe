@@ -21,6 +21,13 @@ functions:
           path: /games
           method: get
           integration: lambda
+  games-create:
+    handler: src/functions/games/create.handler
+    events:
+      - http:
+          path: /games
+          method: post
+          integration: lambda
 
 resources:
   Resources:

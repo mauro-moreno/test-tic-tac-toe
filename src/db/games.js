@@ -25,6 +25,19 @@ const games = {
     }
   },
 
+  create: async (initialGame) => {
+    try {
+      const params = {
+        TableName: 'games',
+        Item: initialGame,
+      };
+      await documentClient.put(params).promise();
+      return initialGame;
+    } catch (err) {
+      throw new NestedError('Error while creating new game', err);
+    }
+  },
+
 };
 
 module.exports = games;

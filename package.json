@@ -31,6 +31,7 @@
     "serverless-offline": "^5.11.0"
   },
   "dependencies": {
-    "nested-error-stacks": "^2.1.0"
+    "nested-error-stacks": "^2.1.0",
+    "uuid": "^3.3.3"
   }
 }

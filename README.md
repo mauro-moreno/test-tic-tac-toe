@@ -5,13 +5,13 @@ Tic Tac Toe basic API
 ## TODO
 
 - [ ] Configuration
-- [ ] Serverless
-- [ ] List all games
-- [ ] New game
+- [x] Serverless
+- [x] List all games
+- [x] New game
 - [ ] Show game
 - [ ] New move
 - [x] Linter
-- [ ] Deploy AWS
+- [x] Deploy AWS
 - [ ] Test
 - [ ] AI
 
@@ -37,18 +37,88 @@ Base URL: `localhost`
 
 * Url: `/games`
 * Method: `GET`
+* Response:
+  ```
+  {
+    statusCode: 200,
+    data: [
+      {
+        "id": "86a6fac1-b863-49e6-a552-dcce05737029"
+      },
+      {
+        "id": "86a6fac1-b863-49e6-a552-dcce05737030"
+      }
+    ]
+  }
+  ```
 
-### New game
+### Games create
 
 * Url: `/games`
 * Method: `POST`
+* Response:
+  ```
+  {
+    "statusCode": 201,
+    "data": {
+      "id": "86a6fac1-b863-49e6-a552-dcce05737029",
+      "grid": [
+        [
+          "-",
+          "-",
+          "-"
+        ],
+        [
+          "-",
+          "-",
+          "-"
+        ],
+        [
+          "-",
+          "-",
+          "-"
+        ]
+      ],
+      "lastPlayer": "O",
+      "gameOver": false
+    }
+  }
+  ```
 
-### Show game
+### Games show
 
 * Url: `/games/{gameUuid}`
 * Method: `GET`
+* Response:
+  ```
+  {
+    "statusCode": 200,
+    "data": {
+      "id": "86a6fac1-b863-49e6-a552-dcce05737029",
+      "grid": [
+        [
+          "-",
+          "-",
+          "-"
+        ],
+        [
+          "-",
+          "-",
+          "-"
+        ],
+        [
+          "-",
+          "-",
+          "-"
+        ]
+      ],
+      "lastPlayer": "O",
+      "gameOver": false
+    }
+  }
+  ```
 
-### New Move
+### Move
 
 * Url: `/games/{gameUuid}/moves`
 * Method: `POST`
